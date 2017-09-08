@@ -17,11 +17,12 @@ TARGETDIR=$HOME/.config/freeplane/1.6.x/
 #
 
 # 1. zips (lib, icons)
-ZIPSDIR=$TARGETDIR/lib/
-mkdir -p $ZIPSDIR
-cp -r $SRCDIR/zips/ $ZIPSDIR/
+cp -r $SRCDIR/zips/icons/* $TARGETDIR/icons/
+cp -r $SRCDIR/zips/lib/* $TARGETDIR/lib/
+echo "Zips copied."
 
 # 2. scripts
 SCRIPTSDIR=$TARGETDIR/addons/yatodo/scripts
 mkdir -p $SCRIPTSDIR
 cp -r $SRCDIR/scripts/* $SCRIPTSDIR/
+echo "Scripts copied."
