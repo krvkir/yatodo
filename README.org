@@ -1,0 +1,16 @@
+#+TITLE: Yatodo
+
+Yet another todo manager for Freeplane. Under construction.
+
+* What's inside
+
+Already here:
+- Syncronization with ~todo.txt~ file
+- Fancy icons for tasks and contexts (thanks [[https://icons8.com][Icons8]] -- here's the link you so much asked me to set!)
+
+Planned:
+- GTD map template with predefined styles for Next Actions, Done items, Someday items, Projects, icons for contexts and so on
+- Shortcuts for common actions (toggle Next Action / Todo / Someday / no status)
+- Archive and Someday in separate maps (prevents your main GTD map from bloating)
+- Analytics of your performance
+- Required and spent time assessing

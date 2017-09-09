@@ -1,6 +1,7 @@
 <map version="freeplane 1.6.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="yatodo" FOLDED="false" ID="ID_1642862060" CREATED="1504815783545" MODIFIED="1504901950335" LINK="http://github.com/krvkir/yatodo" BACKGROUND_COLOR="#97c7dc" STYLE="oval">
+<attribute_registry SHOW_ATTRIBUTES="hide"/>
+<node TEXT="yatodo" FOLDED="false" ID="ID_1642862060" CREATED="1504815783545" MODIFIED="1504979088870" LINK="http://github.com/krvkir/yatodo" BACKGROUND_COLOR="#97c7dc" STYLE="oval">
 <font SIZE="16" BOLD="true" ITALIC="true"/>
 <hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
@@ -104,9 +105,8 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="description" POSITION="left" ID="ID_886398074" CREATED="1504815825103" MODIFIED="1504901950361"><richcontent TYPE="NOTE">
+<node TEXT="description" POSITION="left" ID="ID_886398074" CREATED="1504815825103" MODIFIED="1504979088920"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -124,11 +124,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Yet another todo addon for Freeplane.&#xa;&#xa;Resembles the functionality of great FreeplaneGTD and GTDSyncWithTodoTxt addons which although had one &quot;fatal flow&quot; that I didn&apos;t write them.&#xa;&#xa;For now the functionality is limited to:&#xa;- synchronization with todo.txt" ID="ID_1586266057" CREATED="1504882758070" MODIFIED="1504882934820"/>
 </node>
-<node TEXT="changes" POSITION="left" ID="ID_1132165693" CREATED="1504815825114" MODIFIED="1504901950367"><richcontent TYPE="NOTE">
+<node TEXT="changes" POSITION="left" ID="ID_1132165693" CREATED="1504815825114" MODIFIED="1504979088923"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -140,13 +139,12 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="0.0.1.dev" ID="ID_451916968" CREATED="1504882938740" MODIFIED="1504882943907">
+<node TEXT="0.1" OBJECT="java.lang.Double|0.1" ID="ID_451916968" CREATED="1504882938740" MODIFIED="1504979010276">
 <node TEXT="Initial release" ID="ID_1257002401" CREATED="1504882945224" MODIFIED="1504882948404"/>
 </node>
 </node>
-<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_1362694092" CREATED="1504815825120" MODIFIED="1504901950373"><richcontent TYPE="NOTE">
+<node TEXT="license" FOLDED="true" POSITION="left" ID="ID_1362694092" CREATED="1504815825120" MODIFIED="1504979088926"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -164,11 +162,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="&#xa;This add-on is free software: you can redistribute it and/or modify&#xa;it under the terms of the GNU General Public License as published by&#xa;the Free Software Foundation, either version 2 of the License, or&#xa;(at your option) any later version.&#xa;&#xa;This program is distributed in the hope that it will be useful,&#xa;but WITHOUT ANY WARRANTY; without even the implied warranty of&#xa;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the&#xa;GNU General Public License for more details.&#xa;" ID="ID_1991265743" CREATED="1504815825128" MODIFIED="1504815825130"/>
 </node>
-<node TEXT="preferences.xml" POSITION="left" ID="ID_1262322208" CREATED="1504815825146" MODIFIED="1504901950380"><richcontent TYPE="NOTE">
+<node TEXT="preferences.xml" POSITION="left" ID="ID_1262322208" CREATED="1504815825146" MODIFIED="1504979088931"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -183,10 +180,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="default.properties" POSITION="left" ID="ID_158529569" CREATED="1504815825153" MODIFIED="1504901950386"><richcontent TYPE="NOTE">
+<node TEXT="default.properties" POSITION="left" ID="ID_158529569" CREATED="1504815825153" MODIFIED="1504979088934"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -198,10 +194,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="translations" POSITION="left" ID="ID_387357516" CREATED="1504815825159" MODIFIED="1504901950392"><richcontent TYPE="NOTE">
+<node TEXT="translations" POSITION="left" ID="ID_387357516" CREATED="1504815825159" MODIFIED="1504979088938"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -224,15 +219,15 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="en" ID="ID_1945610221" CREATED="1504815825171" MODIFIED="1504901989366">
+<node TEXT="en" ID="ID_1945610221" CREATED="1504815825171" MODIFIED="1504979255024">
 <attribute NAME="addons.${name}" VALUE="yatodo"/>
 <attribute NAME="addons.${name}.sync" VALUE="Sync with todo.txt"/>
-<attribute NAME="addon.${name}.test" VALUE="(Development) Run tests"/>
+<attribute NAME="addons.${name}.test" VALUE="(Development) Run tests"/>
+<attribute NAME="addons.${name}.task_toggle" VALUE="Toggle task status"/>
 </node>
 </node>
-<node TEXT="scripts" POSITION="right" ID="ID_263862560" CREATED="1504815825220" MODIFIED="1504901950408"><richcontent TYPE="NOTE">
+<node TEXT="scripts" POSITION="right" ID="ID_263862560" CREATED="1504815825220" MODIFIED="1504979088950"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -352,9 +347,19 @@
     </p>
   </body>
 </html>
-
 </richcontent>
-<node TEXT="sync.groovy" ID="ID_1083860608" CREATED="1504879737220" MODIFIED="1504901928110">
+<node TEXT="test.groovy" ID="ID_1030825054" CREATED="1504978463422" MODIFIED="1504979197210">
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.test"/>
+<attribute NAME="menuLocation" VALUE="main_menu_scripting/${name}"/>
+<attribute NAME="executionMode" VALUE="on_single_node"/>
+<attribute NAME="keyboardShortcut" VALUE=""/>
+<attribute NAME="execute_scripts_without_asking" VALUE="true"/>
+<attribute NAME="execute_scripts_without_file_restriction" VALUE="true"/>
+<attribute NAME="execute_scripts_without_write_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
+<attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
+</node>
+<node TEXT="sync.groovy" ID="ID_1627223613" CREATED="1504978463430" MODIFIED="1504983940678">
 <attribute NAME="menuTitleKey" VALUE="addons.${name}.sync"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
@@ -365,8 +370,8 @@
 <attribute NAME="execute_scripts_without_exec_restriction" VALUE="false"/>
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
-<node TEXT="test.groovy" ID="ID_103773498" CREATED="1504901950425" MODIFIED="1504902009414">
-<attribute NAME="menuTitleKey" VALUE="addon.${name}.test"/>
+<node TEXT="task_toggle.groovy" ID="ID_205405561" CREATED="1504978463432" MODIFIED="1504979292851">
+<attribute NAME="menuTitleKey" VALUE="addons.${name}.task_toggle"/>
 <attribute NAME="menuLocation" VALUE="main_menu_scripting/${name}"/>
 <attribute NAME="executionMode" VALUE="on_single_node"/>
 <attribute NAME="keyboardShortcut" VALUE=""/>
@@ -377,7 +382,7 @@
 <attribute NAME="execute_scripts_without_network_restriction" VALUE="false"/>
 </node>
 </node>
-<node TEXT="lib" POSITION="right" ID="ID_72746269" CREATED="1504815825253" MODIFIED="1504901950487"><richcontent TYPE="NOTE">
+<node TEXT="lib" POSITION="right" ID="ID_72746269" CREATED="1504815825253" MODIFIED="1504979089009"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -413,10 +418,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="zips" POSITION="right" ID="ID_1655268475" CREATED="1504815825262" MODIFIED="1504901950495"><richcontent TYPE="NOTE">
+<node TEXT="zips" POSITION="right" ID="ID_1655268475" CREATED="1504815825262" MODIFIED="1504979089015"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -452,12 +456,11 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="icons" ID="ID_1684159884" CREATED="1504878873924" MODIFIED="1504878876004"/>
 <node TEXT="lib" ID="ID_1045663983" CREATED="1504878878706" MODIFIED="1504878896750"/>
 </node>
-<node TEXT="images" POSITION="right" ID="ID_338979402" CREATED="1504815825270" MODIFIED="1504901950518"><richcontent TYPE="NOTE">
+<node TEXT="images" POSITION="right" ID="ID_338979402" CREATED="1504815825270" MODIFIED="1504979089043"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -489,10 +492,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="deinstall" POSITION="left" ID="ID_534008061" CREATED="1504895323347" MODIFIED="1504901956326"><richcontent TYPE="NOTE">
+<node TEXT="deinstall" POSITION="left" ID="ID_1753141801" CREATED="1504978463415" MODIFIED="1504979088940"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -504,27 +506,44 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}.script.xml"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/test.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/sync.groovy"/>
+<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/task_toggle.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBank.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoInboxRed.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoLaptop.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/Yatodo60000miles.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBigInboxRed.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoMall.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoHome.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoToday.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoReference.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoOffice2.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoCity.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBigInboxYellow.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoTaskSomedayMaybe.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoInboxYellow.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoProject.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoMail.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBigInboxGreen.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoIkea.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoTrain.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBigInboxBlue.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoTaskDone.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoOffice.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoInboxBlue.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoWeb.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/icons/YatodoPhone.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoBigInboxGrey.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoInboxGreen.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoLinks.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoTaskNextAction.png"/>
+<attribute NAME="delete" VALUE="${installationbase}/icons/YatodoInboxGrey.png"/>
 <attribute NAME="delete" VALUE="${installationbase}/lib/Yatodo/TodoTxt.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/lib/Yatodo/Config.groovy"/>
 <attribute NAME="delete" VALUE="${installationbase}/lib/Yatodo/Task.groovy"/>
-<attribute NAME="delete" VALUE="${installationbase}/addons/${name}/scripts/test.groovy"/>
 </node>
 </node>
 </map>

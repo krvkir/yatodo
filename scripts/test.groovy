@@ -14,7 +14,7 @@ def test_Config() {
 }
 
 def test_TodoTxt_converter() {
-    todo_txt = TodoTxt(c: c, path:Config.paths['todo.txt'])
+    def todo_txt = new TodoTxt(c: c, path:Config.paths['todo.txt'])
 
     def line = 'x 2017-06-17 2017-06-04 Сходить на почту за посылкой @Home node:ID_1577178381'
     def task = todo_txt.taskFromLine(line)
@@ -42,7 +42,7 @@ def test_TodoTxt_converter() {
 
 def test_TodoTxt() {
     println "### Tasks from the todo.txt ###"
-    def path = "/home/krvkir/+Personal/Actions/todo.txt"
+    def path = "/home/krvkir/+Actions/todo.txt"
     def todo_txt = new TodoTxt(c: c, path: path)
     def tasks = todo_txt.load()
     tasks.each { println it }
@@ -54,6 +54,7 @@ def test_TodoTxt() {
 //////////////////////////////////////////////////////////////////////
 
 Config.init(c)
+println Config.paths
 test_Config()
 test_TodoTxt_converter()
 test_TodoTxt()

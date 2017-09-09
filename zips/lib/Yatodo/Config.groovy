@@ -16,7 +16,8 @@ class Config {
     static _projectIcons = ['Project']
     static configNode
 
-    static icons = [contexts: [:], projects: [:], tasks: [:]]
+    static icons = [contexts: [:], projects: [:]]
+    static styles = [:]
     static paths = [:]
 
     static c = null
@@ -54,15 +55,22 @@ class Config {
                     icons.contexts[name[1..-1]] = icon
                 }
             }
-            else if (it.text.startsWith("Path: ") && (it.details != null)) {
-                // Found a path
-                paths[it.text[6..-1]] = (String) it.details
+            else if (it.text.startsWith("Path: ") && (it.link.getFile() != null)) {
+                // Found a path (paths are stored in links)
+                paths[it.text[6..-1]] = (String) it.link.getFile().path
+            }
+            else if (it.text.startsWith("Style: ") && (it.style.name != 'default')) {
+                // Found a style
+                styles[it.text[7..-1]] = it.style.name
             }
         }
+        // Todo.txt should exist
         assert 'todo.txt' in paths
-        assert 'Next Action' in icons.tasks
-        assert 'Done' in icons.tasks
-        assert 'Project' in icons.projects
+        // Styles for mandatory GTD entries should exist
+        assert 'NextAction' in styles
+        assert 'Done' in styles
+        assert 'SomedayMaybe' in styles
+        assert 'Project' in styles
     }
 
     /**
@@ -76,9 +84,14 @@ class Config {
      * Checks a node to contain a task
      */
     static nodeIsTask(node) {
-        return node.icons.collect {
-            icons.tasks.containsValue(it)
-        }.any() && (node.parent != configNode)
+        return (
+            (node.parent != configNode)
+            && (
+                (node.style.name == styles['NextAction'])
+                || (node.style.name == styles['Done'])
+                || (node.style.name == styles['SomedayMaybe'])
+            )
+        )
     }
 
     /**
@@ -86,10 +99,14 @@ class Config {
      */
     static nodeIsDone(node) {
         assert nodeIsTask(node)
-        if (node.icons.contains(icons.tasks['Next Action'])) {
-            return false
-        } else if (node.icons.contains(icons.tasks['Done'])) {
-            return  true
+        if (node.style.name == styles['Done']) {
+            return 1
+        }
+        else if (node.style.name == styles['NextAction']) {
+            return 0
+        }
+        else {
+            return 2
         }
     }
 
@@ -135,8 +152,8 @@ class Config {
         // Icons:
         node.icons.clear()
         // next action / done
-        node.icons.addIcon(
-            task.done ? icons.tasks['Done'] : icons.tasks['Next Action']
+        node.style.name = (
+            task.done ? styles['Done'] : styles['NextAction']
         )
         // contexts
         task.contexts.each {

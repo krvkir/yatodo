@@ -87,6 +87,9 @@ class TodoTxt {
     def save(tasks) {
         def file = new File(path)
         file.bytes = []
-        tasks.each { file.append(taskToLine(it) + "\n") }
+        tasks.each {
+            println "Going to write ${it.text} into ${path}"
+            file.append(taskToLine(it) + "\n")
+        }
     }
 }

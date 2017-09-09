@@ -28,7 +28,13 @@ def sync() {
             }
             else {
                 def task_from_registry = registry[task.properties['node']]
-                if (task_from_registry.lastModifiedAt < task.lastModifiedAt) {
+                if (task_from_registry == null) {
+                    println (
+                        "Node for task ${task.text} exitss but"
+                        + "it is not a task now -- removing from todo.txt"
+                        )
+                }
+                else if (task_from_registry.lastModifiedAt < task.lastModifiedAt) {
                     // TODO
                     println "Going to update task ${task_from_registry.text} using todo.txt"
                 }
@@ -48,7 +54,10 @@ def sync() {
         })
 
     // Write tasks back to todo.txt
-    todoTxt.save(registry.values())
+    todoTxt.save(
+        registry.values().grep {
+            !Config.nodeIsDone(it.node)
+        })
 }
 
 // println "Creating temporary todo.txt"
@@ -59,5 +68,11 @@ def sync() {
 //     outFile.append(it + "\n")
 // }
 
+println "######################################################################"
+println "# Start syncing ######################################################"
+
 Config.init(c)
 sync()
+
+println "# End sync ###########################################################"
+println "######################################################################"
